@@ -150,7 +150,7 @@ namespace StarsHelper
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("It will be available in the next release!");
+            MessageBox.Show("Hopefully it will be available in the next release!");
         }
     }
 }
