@@ -46,5 +46,6 @@ namespace StarsHelper
             source.Refresh();
             this.Close();
         }
+
     }
 }

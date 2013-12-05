@@ -37,6 +37,7 @@
             this.Day = new System.Windows.Forms.TextBox();
             this.StartTime = new System.Windows.Forms.TextBox();
             this.EndTime = new System.Windows.Forms.TextBox();
+            this.WarningForDuplicationLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -77,9 +78,9 @@
             // 
             // OKButton
             // 
-            this.OKButton.Location = new System.Drawing.Point(164, 126);
+            this.OKButton.Location = new System.Drawing.Point(41, 152);
             this.OKButton.Name = "OKButton";
-            this.OKButton.Size = new System.Drawing.Size(108, 40);
+            this.OKButton.Size = new System.Drawing.Size(197, 40);
             this.OKButton.TabIndex = 4;
             this.OKButton.Text = "I know I want a lot! Please Proceed!";
             this.OKButton.UseVisualStyleBackColor = true;
@@ -113,11 +114,21 @@
             this.EndTime.Size = new System.Drawing.Size(100, 20);
             this.EndTime.TabIndex = 8;
             // 
+            // WarningForDuplicationLabel
+            // 
+            this.WarningForDuplicationLabel.AutoSize = true;
+            this.WarningForDuplicationLabel.Location = new System.Drawing.Point(40, 136);
+            this.WarningForDuplicationLabel.Name = "WarningForDuplicationLabel";
+            this.WarningForDuplicationLabel.Size = new System.Drawing.Size(193, 13);
+            this.WarningForDuplicationLabel.TabIndex = 9;
+            this.WarningForDuplicationLabel.Text = "Don\'t use duplicated names for causes.";
+            // 
             // AddSpecialNeedPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 178);
+            this.ClientSize = new System.Drawing.Size(284, 204);
+            this.Controls.Add(this.WarningForDuplicationLabel);
             this.Controls.Add(this.EndTime);
             this.Controls.Add(this.StartTime);
             this.Controls.Add(this.Day);
@@ -148,5 +159,6 @@
         private System.Windows.Forms.TextBox Day;
         private System.Windows.Forms.TextBox StartTime;
         private System.Windows.Forms.TextBox EndTime;
+        private System.Windows.Forms.Label WarningForDuplicationLabel;
     }
 }

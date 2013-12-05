@@ -19,7 +19,7 @@ namespace StarsHelper.NetworkLayer
             string courseCode = _courseCode.ToUpper();
             try
             {
-                string courseInfoPostData = "acadsem=2013%3B1&r_course_yr=&r_subj_code="+ courseCode + "&r_search_type=F&boption=Search&acadsem=2013%3B1&staff_access=false";
+                string courseInfoPostData = "acadsem=2013%3B2&r_course_yr=&r_subj_code="+ courseCode + "&r_search_type=F&boption=Search&acadsem=2013%3B1&staff_access=false";
                 return getData(COURSE_INFO_URL, "POST", courseInfoPostData);
             }
             catch
@@ -32,14 +32,14 @@ namespace StarsHelper.NetworkLayer
         {
             throw new NotImplementedException();
             string courseCode = _courseCode.ToUpper();
-            string courseVavancyPostData = "acadsem=2013%3B1&r_course_yr=&r_subj_code=" + courseCode + "&r_search_type=F&boption=Search&acadsem=2013%3B1&staff_access=false";
+            string courseVavancyPostData = "acadsem=2013%3B2&r_course_yr=&r_subj_code=" + courseCode + "&r_search_type=F&boption=Search&acadsem=2013%3B1&staff_access=false";
             return getData(COURSE_VACANCY_URL, "POST", courseVavancyPostData);
         }
 
         public string GetCourseExamTime(string _courseCode)
         {
             string courseCode = _courseCode.ToUpper();
-            string courseExamTimePostData = "p_exam_dt=&p_start_time=&p_dept=&p_subj=" + courseCode + "&p_venue=&academic_session=Semester+1+Academic+Year+2013-2014&p_plan_no=1&p_exam_yr=2013&p_semester=1&bOption=Next";
+            string courseExamTimePostData = "p_exam_dt=&p_start_time=&p_dept=&p_subj=" + courseCode + "&p_venue=&academic_session=Semester+1+Academic+Year+2013-2014&p_plan_no=2&p_exam_yr=2013&p_semester=1&bOption=Next";
             return getData(COURSE_EXAM_TIME_URL, "POST", courseExamTimePostData);
         }
 

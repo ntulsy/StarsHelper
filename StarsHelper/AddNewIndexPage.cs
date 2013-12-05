@@ -24,7 +24,7 @@ namespace StarsHelper
         private void OKButton_Click(object sender, EventArgs e)
         {
             CoursePlanningController cpc = new CoursePlanningController();
-            if (CourseCode.Text.Length != 6 ||
+            if (CourseCode.Text.Length != 6 &&
                 CourseCode.Text.Length != 5 ||
                 Regex.IsMatch(CourseCode.Text, @"^[a-zA-Z]+$") )
             {
