@@ -25,7 +25,7 @@ namespace StarsHelper
         private static Color COURSE_COLOR = Color.Cyan;
         private static int currentIndex;
 
-        private void TimeTablePage_Load(object sender, EventArgs e)
+        public void InitializeTable()
         {
             InitializeHeaderComponents();
             DisplayTimetableComponents(CoursePlanningController.IndexRefList);
@@ -198,7 +198,7 @@ namespace StarsHelper
                 // therefore it will determine whether the end has been reached
                 int oldCollectionPointer = CoursePlanningController.CollectionPointer;
                 CoursePlanningController cpc = new CoursePlanningController();
-                cpc.PlanCourse();
+                cpc.PlanCourseAndDisplayTimetable();
                 currentIndex = CoursePlanningController.CollectionPointer;
                 if (oldCollectionPointer == currentIndex)
                     MessageBox.Show("There is no more combination.");

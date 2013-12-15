@@ -160,7 +160,6 @@
             this.Name = "TimeTablePage";
             this.Text = "Display Timetable";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TimeTablePage_FormClosing);
-            this.Load += new System.EventHandler(this.TimeTablePage_Load);
             this.ResumeLayout(false);
 
         }

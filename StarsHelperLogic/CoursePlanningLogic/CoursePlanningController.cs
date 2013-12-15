@@ -127,7 +127,9 @@ namespace StarsHelper.CoursePlanningLogic
                         timetable[i,j,k] = 0;
         }
 
-        public void PlanCourse()
+        // true means it is the first time to run the planner, and display the page.
+        // false means to display next combination in the same window.
+        public bool PlanCourseAndDisplayTimetable()
         {
             if (IsFirstRun)
             {
@@ -145,7 +147,7 @@ namespace StarsHelper.CoursePlanningLogic
             if (CourseList.Count == 0)
             {
                 MessageBox.Show("You have not entered any course yet!");
-                return;
+                return false;
             }
 
             // start to do the loop
@@ -176,13 +178,13 @@ namespace StarsHelper.CoursePlanningLogic
                     CollectionPointer++;
                     if (IsFirstRun)
                     {
-                        Form newTimeTablePage = new TimeTablePage();
-                        newTimeTablePage.Show();
                         IsFirstRun = false;
+                        return true;
                     }
                     break;
                 }
             }
+            return false;
         }
 
         private bool PutIndexIntoTimetable(Index index)

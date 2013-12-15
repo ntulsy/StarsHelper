@@ -144,8 +144,13 @@ namespace StarsHelper
         private void PlanCourse_Click(object sender, EventArgs e)
         {
             CoursePlanningController cpc = new CoursePlanningController();
+            TimeTablePage ttp = new TimeTablePage();
             if (cpc.CheckExamTime())
-                cpc.PlanCourse();
+                if (cpc.PlanCourseAndDisplayTimetable())
+                {
+                    ttp.InitializeTable();
+                    ttp.Show();
+                }
         }
 
         private void button1_Click(object sender, EventArgs e)

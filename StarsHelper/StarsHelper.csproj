@@ -112,7 +112,6 @@
     <Compile Include="AddSpecialNeedPage.Designer.cs">
       <DependentUpon>AddSpecialNeedPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="CoursePlanningLogic\CoursePlanningController.cs" />
     <Compile Include="Gui\OptimizedTableLayoutPanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -122,15 +121,8 @@
     <Compile Include="MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="NetworkLayer\CourseInformationParser.cs" />
-    <Compile Include="NetworkLayer\HtmlParser.cs" />
-    <Compile Include="NetworkLayer\NetworkCommunicator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Structures\Course.cs" />
-    <Compile Include="Structures\Index.cs" />
-    <Compile Include="Structures\IndexRow.cs" />
-    <Compile Include="Structures\WeekDays.cs" />
     <Compile Include="TimeTablePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +184,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StarsHelperLogic\StarsHelperLogic.csproj">
+      <Project>{a28b2aff-99eb-4f1f-b836-38e9851dedb2}</Project>
+      <Name>StarsHelperLogic</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
